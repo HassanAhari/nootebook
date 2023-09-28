@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+</head>
+<body>
+  <form>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <!-- 'required' attribute ensures the field is not empty -->
+  
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <!-- 'type="email"' ensures valid email format -->
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" minlength="8">
+    <!-- 'minlength' sets a minimum character length for the field -->
+  
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" pattern="^[A-Za-z0-9]+$">
+    <!-- 'pattern' attribute enforces a regex pattern for input validation -->
+  
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="18" max="99">
+    <!-- 'type="number"' ensures numeric input; 'min' and 'max' set allowable range -->
+  
+    <label for="agree">I agree to the terms and conditions:</label>
+    <input type="checkbox" id="agree" name="agree" required>
+    <!-- 'type="checkbox"' for accepting terms, 'required' for mandatory agreement -->
+  
+    <label for="country">Country:</label>
+    <select id="country" name="country">
+      <option value="">Select Country</option>
+      <option value="us">United States</option>
+      <option value="ca">Canada</option>
+      <!-- Using a 'select' element for country selection -->
+    </select>
+  
+    <label for="comments">Comments:</label>
+    <textarea id="comments" name="comments" rows="4" cols="50" maxlength="500"></textarea>
+    <!-- 'textarea' for multi-line text input; 'maxlength' sets character limit -->
+    
+    <input type="submit" value="Submit">
+  </form>  
+</body>
+</html>
